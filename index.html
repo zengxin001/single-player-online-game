@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotti: Find the Differences - Free Online Game | singleplayeronlinegame.top</title>
-    <meta name="description" content="Play Spotti: Find the Differences, a challenging observation game where you spot differences between similar images. Test your attention to detail for free.">
-    <link rel="canonical" href="https://singleplayeronlinegame.top/game1.html">
+    <title>Single Player Online Games - Free Browser Games | singleplayeronlinegame.top</title>
+    <meta name="description" content="Play the best single player online games for free. Enjoy a variety of browser-based games including puzzle, arcade, shooting, and strategy games.">
+    <link rel="canonical" href="https://singleplayeronlinegame.top">
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEKGPEDKVZ"></script>
@@ -48,11 +48,12 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
         
-        .site-title {
-            font-size: 1.5rem;
+        h1 {
+            font-size: 2.5rem;
             color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: 1px;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         
         .container {
@@ -61,27 +62,74 @@
             padding: 2rem 1rem;
         }
         
-        .game-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
+        .intro {
             text-align: center;
+            margin-bottom: 3rem;
         }
         
-        .game-intro {
+        .intro p {
             color: var(--text-secondary);
-            text-align: center;
             max-width: 800px;
-            margin: 0 auto 2rem;
+            margin: 1rem auto;
             font-size: 1.1rem;
         }
         
-        .game-container {
+        .game-card {
             background-color: var(--bg-card);
             border-radius: 8px;
             overflow: hidden;
             margin-bottom: 2.5rem;
             box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+        
+        .game-info {
+            flex: 1;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .game-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 550px;
+        }
+        
+        .play-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+        
+        .play-btn:hover {
+            background-color: var(--accent-hover);
         }
         
         .game-frame-container {
@@ -99,89 +147,6 @@
             border: none;
         }
         
-        .back-to-home {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            text-decoration: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        
-        .back-to-home:hover {
-            background-color: var(--accent-hover);
-        }
-        
-        .game-details {
-            background-color: var(--bg-card);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-            box-shadow: var(--card-shadow);
-        }
-        
-        .game-details h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-        
-        .game-details p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-        
-        .game-features {
-            margin: 1.5rem 0;
-        }
-        
-        .game-features h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-        
-        .feature-list {
-            list-style-type: none;
-        }
-        
-        .feature-list li {
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .feature-list li:before {
-            content: "•";
-            color: var(--accent);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .fullscreen-btn {
-            display: block;
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            margin: 1rem auto;
-            transition: background-color 0.3s ease;
-            width: fit-content;
-        }
-        
-        .fullscreen-btn:hover {
-            background-color: var(--accent-hover);
-        }
-        
         footer {
             background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
@@ -195,50 +160,160 @@
         }
         
         @media (max-width: 768px) {
-            .game-title {
+            h1 {
                 font-size: 2rem;
             }
             
-            .game-details {
-                padding: 1.5rem;
+            .game-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .play-btn {
+                margin: 1rem 0 0 0;
+                align-self: flex-end;
+            }
+            
+            .game-description {
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="site-title">Single Player Online Game</a>
+        <h1>Single Player Online Game</h1>
     </header>
     
     <main class="container">
-        <h1 class="game-title">Spotti: Find the Differences</h1>
-        <p class="game-intro">Challenge your observation skills in this engaging game where you need to find subtle differences between seemingly identical images.</p>
+        <section class="intro">
+            <p>Welcome to the ultimate destination for free single player online games. Explore our collection of handpicked browser games that you can play instantly without downloads.</p>
+        </section>
         
-        <div class="game-container">
+        <!-- Game 1 -->
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-info">
+                    <h3>Spotti: Find the Differences</h3>
+                    <p class="game-description">Challenge your observation skills by finding differences between images.</p>
+                </div>
+                <a href="game1.html" class="play-btn">Play Now</a>
+            </div>
             <div class="game-frame-container">
                 <iframe src="https://www.crazygames.com/embed/spotti-find-the-differences" class="game-frame" title="Spotti: Find the Differences Game" allow="fullscreen" allowfullscreen></iframe>
             </div>
-            <button id="fullscreen-btn" class="fullscreen-btn">Play Fullscreen</button>
         </div>
         
-        <div class="game-details">
-            <h2>Game Details</h2>
-            <p>Spotti: Find the Differences is an engaging puzzle game that tests your observation skills and attention to detail. The game presents you with pairs of images that appear identical at first glance, but contain subtle differences that you must identify.</p>
-            
-            <div class="game-features">
-                <h3>Game Features</h3>
-                <ul class="feature-list">
-                    <li>Multiple levels with increasing difficulty</li>
-                    <li>Carefully designed puzzles to test your observation skills</li>
-                    <li>Time-based challenges to add excitement</li>
-                    <li>Hint system when you get stuck</li>
-                    <li>Beautiful graphics and intuitive interface</li>
-                </ul>
+        <!-- Game 2 -->
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-info">
+                    <h3>Treasure Champion - Chest Capture</h3>
+                    <p class="game-description">Collect treasures and avoid obstacles in this adventure game.</p>
+                </div>
+                <a href="game2.html" class="play-btn">Play Now</a>
             </div>
-            
-            <p>Perfect for players who enjoy brain teasers and visual challenges, Spotti offers hours of entertaining gameplay as you train your eye to spot even the smallest details. Challenge yourself to complete all levels and become a master observer!</p>
-            
-            <a href="index.html" class="back-to-home">Back to Games</a>
+            <div class="game-frame-container">
+                <iframe src="https://www.crazygames.com/embed/treasure-champion---chest-capture" class="game-frame" title="Treasure Champion Game" allow="fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <!-- Game 3 -->
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-info">
+                    <h3>Dobble Go</h3>
+                    <p class="game-description">Test your speed and perception in this matching card game.</p>
+                </div>
+                <a href="game3.html" class="play-btn">Play Now</a>
+            </div>
+            <div class="game-frame-container">
+                <iframe src="https://www.crazygames.com/embed/dobble-go" class="game-frame" title="Dobble Go Game" allow="fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <!-- Game 4 -->
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-info">
+                    <h3>Shell Shockers</h3>
+                    <p class="game-description">First-person shooter game with egg characters and unique weapons.</p>
+                </div>
+                <a href="game4.html" class="play-btn">Play Now</a>
+            </div>
+            <div class="game-frame-container">
+                <iframe src="https://www.crazygames.com/embed/shellshockersio" class="game-frame" title="Shell Shockers Game" allow="fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <!-- Game 5 -->
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-info">
+                    <h3>8 Ball Billiards Classic</h3>
+                    <p class="game-description">Play traditional pool with realistic physics and controls.</p>
+                </div>
+                <a href="game5.html" class="play-btn">Play Now</a>
+            </div>
+            <div class="game-frame-container">
+                <iframe src="https://www.crazygames.com/embed/8-ball-billiards-classic" class="game-frame" title="8 Ball Billiards Classic Game" allow="fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <!-- Game 6 -->
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-info">
+                    <h3>Ragdoll Archers</h3>
+                    <p class="game-description">Aim, shoot and defeat enemies in this physics-based archery game.</p>
+                </div>
+                <a href="game6.html" class="play-btn">Play Now</a>
+            </div>
+            <div class="game-frame-container">
+                <iframe src="https://www.crazygames.com/embed/ragdoll-archers" class="game-frame" title="Ragdoll Archers Game" allow="fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <!-- Game 7 -->
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-info">
+                    <h3>Man Runner 2048</h3>
+                    <p class="game-description">Run, merge numbers, and achieve the highest score possible.</p>
+                </div>
+                <a href="game7.html" class="play-btn">Play Now</a>
+            </div>
+            <div class="game-frame-container">
+                <iframe src="https://www.crazygames.com/embed/man-runner-2048" class="game-frame" title="Man Runner 2048 Game" allow="fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <!-- Game 8 -->
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-info">
+                    <h3>Desktop Tower Defense</h3>
+                    <p class="game-description">Strategic defense game where you build towers to stop invaders.</p>
+                </div>
+                <a href="game8.html" class="play-btn">Play Now</a>
+            </div>
+            <div class="game-frame-container">
+                <iframe src="https://www.crazygames.com/embed/desktop-tower-defense" class="game-frame" title="Desktop Tower Defense Game" allow="fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <!-- Game 9 -->
+        <div class="game-card">
+            <div class="game-header">
+                <div class="game-info">
+                    <h3>Ninja Parkour Multiplayer</h3>
+                    <p class="game-description">Navigate obstacles and complete challenging parkour courses.</p>
+                </div>
+                <a href="game9.html" class="play-btn">Play Now</a>
+            </div>
+            <div class="game-frame-container">
+                <iframe src="https://www.crazygames.com/embed/ninja-parkour-multiplayer" class="game-frame" title="Ninja Parkour Multiplayer Game" allow="fullscreen" allowfullscreen></iframe>
+            </div>
         </div>
     </main>
     
@@ -246,30 +321,5 @@
         <p>&copy; 2023 singleplayeronlinegame.top - All Rights Reserved</p>
         <p>All games are property of their respective owners and hosted by CrazyGames</p>
     </footer>
-    
-    <script>
-        // Fullscreen functionality
-        document.getElementById('fullscreen-btn').addEventListener('click', function() {
-            const iframe = document.querySelector('.game-frame');
-            
-            try {
-                if (iframe.requestFullscreen) {
-                    iframe.requestFullscreen();
-                } else if (iframe.webkitRequestFullscreen) {
-                    iframe.webkitRequestFullscreen();
-                } else if (iframe.mozRequestFullScreen) {
-                    iframe.mozRequestFullScreen();
-                } else if (iframe.msRequestFullscreen) {
-                    iframe.msRequestFullscreen();
-                } else {
-                    console.log('Fullscreen API not supported');
-                    alert('Fullscreen mode is not supported in your browser');
-                }
-            } catch (e) {
-                console.error('Fullscreen error:', e);
-                alert('Unable to enter fullscreen mode. Try using a different browser.');
-            }
-        });
-    </script>
 </body>
 </html> 
